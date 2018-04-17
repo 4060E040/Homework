@@ -42,6 +42,7 @@ int main()
     return 0;
 }
 
+![image](picture or gif url)
 家庭作業 / PIC /work.png
 
 
