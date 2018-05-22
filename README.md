@@ -50,6 +50,109 @@ int main()
 ###### exercise1
 
 ```
+4/22
+
+定義:Circle.h
+
+class Circle
+{
+public:
+  // The radius of this circle
+  double radius;
+
+  // Construct a default circle object
+  Circle();
+
+  // Construct a circle object
+  Circle(double);
+
+  // Return the area of this circle
+  double getArea();
+};
+
+
+實作:Circle.cpp
+
+#include "Circle.h"
+
+// Construct a default circle object
+Circle::Circle()
+{
+  radius = 1;
+}
+
+// Construct a circle object
+Circle::Circle(double newRadius)
+{
+  radius = newRadius;
+}
+
+// Return the area of this circle
+double Circle::getArea()
+{
+  return radius * radius * 3.1415;
+}
+
+主執行程式:
+
+#include <iostream>
+#include "Circle.h"
+using namespace std;
+
+int main()
+{
+  Circle circle1;
+  Circle circle2(5.0);
+
+  cout << "The area of the circle of radius "
+    << circle1.radius << " is " << circle1.getArea() << endl;
+  cout << "The area of the circle of radius "
+    << circle2.radius << " is " << circle2.getArea() << endl;
+
+  // Modify circle radius
+  circle2.radius = 100;
+  cout << "The area of the circle of radius "
+    << circle2.radius << " is " << circle2.getArea() << endl;
+
+  return 0;
+}
+
+```
+###### exercise1
+
+```
+
+5/8
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  string s1("Welcome");
+  s1.append(" to CPP"); 
+  cout << s1 << endl; 
+  
+  string s2("Welcome");
+  s2.append(" to C and C++", 0, 5); // appends " to C" to s2
+  cout << s2 << endl; // s2 now becomes Welcome to C
+
+  string s3("Welcome");
+  s3.append(" to C and C++", 5); // appends " to C" to s3
+  cout << s3 << endl; // s3 now becomes Welcome to C
+
+  string s4("Welcome"); 
+  s4.append(4, 'G'); // appends "GGGG" to s4
+  cout << s4 << endl; // s4 now becomes WelcomeGGGG
+
+  return 0;
+}
+
+```
+###### exercise1
+
+```
+
 5/22
 
 #ifndef STACK_H
@@ -106,18 +209,6 @@ int Stack<T>::getSize() const
 {
   return size;
 }
-
-```
-###### exercise1
-
-```
-
-
-```
-###### exercise1
-
-```
-
 
 ```
 ###### exercise1
